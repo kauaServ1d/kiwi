@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NOIR CLUB</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Inter',sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:#0d0d0d;
+color:white;
+overflow-x:hidden;
+}
+
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:30px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+z-index:1000;
+background:rgba(13,13,13,.7);
+backdrop-filter:blur(15px);
+}
+
+.logo{
+font-size:1.4rem;
+font-weight:900;
+letter-spacing:4px;
+}
+
+.logo span{
+color:#c6a972;
+}
+
+nav{
+display:flex;
+gap:35px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+font-weight:500;
+opacity:.8;
+transition:.3s;
+}
+
+nav a:hover{
+opacity:1;
+color:#c6a972;
+}
+
+.hero{
+height:100vh;
+background:
+linear-gradient(
+to right,
+rgba(0,0,0,.9),
+rgba(0,0,0,.45)
+),
+url("https://images.unsplash.com/photo-1542751371-adc38448a05e?w=2200");
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+padding:0 8%;
+}
+
+.hero-content{
+max-width:700px;
+}
+
+.hero h1{
+font-size:6rem;
+line-height:.95;
+font-weight:900;
+margin-bottom:30px;
+}
+
+.hero p{
+font-size:1.2rem;
+line-height:2;
+color:#d0d0d0;
+max-width:550px;
+}
+
+.btn{
+display:inline-block;
+margin-top:35px;
+padding:18px 42px;
+background:#c6a972;
+color:black;
+text-decoration:none;
+font-weight:700;
+border-radius:999px;
+transition:.3s;
+}
+
+.btn:hover{
+transform:translateY(-4px);
+}
+
+section{
+padding:120px 8%;
+}
+
+.title{
+font-size:3rem;
+font-weight:900;
+margin-bottom:25px;
+}
+
+.subtitle{
+color:#bdbdbd;
+line-height:2;
+max-width:700px;
+}
+
+.about{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+align-items:center;
+}
+
+.about img{
+width:100%;
+height:650px;
+object-fit:cover;
+border-radius:30px;
+}
+
+.features{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:30px;
+margin-top:60px;
+}
+
+.card{
+background:#151515;
+padding:40px;
+border-radius:30px;
+border:1px solid rgba(255,255,255,.06);
+transition:.4s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+border-color:#c6a972;
+}
+
+.card h3{
+font-size:1.4rem;
+margin-bottom:15px;
+}
+
+.card p{
+color:#a7a7a7;
+line-height:1.8;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:30px;
+}
+
+.gallery img{
+width:100%;
+height:500px;
+object-fit:cover;
+border-radius:30px;
+transition:.5s;
+}
+
+.gallery img:hover{
+transform:scale(1.03);
+}
+
+.cta{
+background:#151515;
+border-radius:40px;
+padding:90px;
+text-align:center;
+}
+
+.cta h2{
+font-size:4rem;
+margin-bottom:20px;
+}
+
+.cta p{
+max-width:700px;
+margin:auto;
+line-height:2;
+color:#c5c5c5;
+}
+
+footer{
+padding:40px;
+text-align:center;
+color:#999;
+border-top:1px solid rgba(255,255,255,.05);
+}
+
+.reveal{
+opacity:0;
+transform:translateY(60px);
+transition:1s;
+}
+
+.reveal.active{
+opacity:1;
+transform:translateY(0);
+}
+
+@media(max-width:1000px){
+
+.about{
+grid-template-columns:1fr;
+}
+
+.features{
+grid-template-columns:1fr;
+}
+
+.gallery{
+grid-template-columns:1fr;
+}
+
+.hero h1{
+font-size:3.5rem;
+}
+
+nav{
+display:none;
+}
+
+.cta h2{
+font-size:2.3rem;
+}
+}
+
+</style>
+</head>
+<body>
+
+<header>
+
+<div class="logo">
+NOIR<span>.</span>
+</div>
+
+<nav>
+<a href="#">Início</a>
+<a href="#">Espaço</a>
+<a href="#">Experiência</a>
+<a href="#">Contato</a>
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>
+A NOVA ERA
+DO DIGITAL
+</h1>
+
+<p>
+Mais do que uma lan house.
+Um ambiente premium para jogar,
+criar, trabalhar e viver experiências
+de alto nível.
+</p>
+
+<a href="#" class="btn">
+Reservar Agora
+</a>
+
+</div>
+
+</section>
+
+<section class="reveal">
+
+<div class="about">
+
+<img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?w=1800">
+
+<div>
+
+<h2 class="title">
+Exclusividade em cada detalhe
+</h2>
+
+<p class="subtitle">
+Projetado para oferecer conforto,
+performance e sofisticação.
+Equipamentos de última geração,
+ambiente climatizado e estrutura
+pensada para quem busca excelência.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="reveal">
+
+<h2 class="title">
+Uma experiência diferente
+</h2>
+
+<div class="features">
+
+<div class="card">
+<h3>Performance</h3>
+<p>
+Máquinas de alto desempenho para qualquer atividade.
+</p>
+</div>
+
+<div class="card">
+<h3>Conforto</h3>
+<p>
+Ambientes silenciosos e preparados para longas sessões.
+</p>
+</div>
+
+<div class="card">
+<h3>Exclusividade</h3>
+<p>
+Um espaço premium para clientes exigentes.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="reveal">
+
+<h2 class="title">
+Ambiente
+</h2>
+
+<div class="gallery">
+
+<img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=1800">
+
+<img src="https://images.unsplash.com/photo-1593305841991-05c297ba4575?w=1800">
+
+<img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?w=1800">
+
+<img src="https://images.unsplash.com/photo-1542751110-97427bbecf20?w=1800">
+
+</div>
+
+</section>
+
+<section class="reveal">
+
+<div class="cta">
+
+<h2>
+Pronto para conhecer o futuro?
+</h2>
+
+<p>
+Reserve sua estação e descubra uma nova forma de viver tecnologia e entretenimento.
+</p>
+
+<a href="#" class="btn">
+Entrar para o Clube
+</a>
+
+</div>
+
+</section>
+
+<footer>
+© 2026 NOIR CLUB • Todos os direitos reservados
+</footer>
+
+<script>
+
+const reveals = document.querySelectorAll('.reveal');
+
+window.addEventListener('scroll',()=>{
+
+reveals.forEach(item=>{
+
+const top = item.getBoundingClientRect().top;
+
+if(top < window.innerHeight - 100){
+item.classList.add('active');
+}
+
+});
+
+});
+
+</script>
+
+</body>
+</html>
